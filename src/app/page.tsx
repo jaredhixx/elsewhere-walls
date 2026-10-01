@@ -1,204 +1,141 @@
 export default function Home() {
   return (
-    <main className="min-h-screen bg-background text-foreground">
-      <header className="site-shell flex items-center justify-between py-6">
-        <a
-          href="/"
-          className="text-sm font-semibold uppercase tracking-[0.22em]"
-        >
-          Elsewhere Walls
-        </a>
-
-        <nav className="flex items-center gap-5 text-sm text-muted">
-          <a href="#support" className="transition hover:text-foreground">
-            Support
+    <main className="h-[100dvh] overflow-hidden bg-background text-foreground">
+      <div className="site-shell grid h-full grid-rows-[auto_1fr_auto]">
+        {/* HEADER */}
+        <header className="flex items-center justify-between border-b border-border py-4 md:py-5">
+          <a
+            href="/"
+            className="text-[10px] font-semibold uppercase tracking-[0.3em] md:text-xs"
+          >
+            Elsewhere Walls
           </a>
 
-          <a href="#updates" className="transition hover:text-foreground">
-            Updates
+          <a
+            href="https://www.tiktok.com/@elsewherewalls"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-[10px] text-subtle transition-colors hover:text-foreground md:text-xs"
+          >
+            @elsewherewalls
           </a>
-        </nav>
-      </header>
+        </header>
 
-      <section className="site-shell flex min-h-[calc(100vh-84px)] items-end pb-12 pt-20 md:pb-20">
-        <div className="w-full border-t border-border pt-8 md:pt-12">
-          <div className="grid gap-12 md:grid-cols-[1.35fr_0.65fr] md:items-end">
-            <div>
-              <p className="eyebrow mb-6">Original digital worlds</p>
+        {/* PAGE */}
+        <section className="grid min-h-0 grid-rows-[1fr_auto]">
+          {/* HERO */}
+          <div className="flex min-h-0 flex-col justify-center pt-[clamp(2rem,6vh,5rem)] pb-[clamp(1rem,2.5vh,2rem)]">
+            <div className="mb-[clamp(0.8rem,2vh,1.4rem)] flex items-center gap-3">
+              <span className="block h-px w-8 bg-accent md:w-12" />
 
-              <h1 className="display-title">
-                Wallpapers from worlds that don&apos;t exist.
-              </h1>
+              <p className="text-[9px] uppercase tracking-[0.28em] text-subtle md:text-[10px]">
+                Original wallpapers · 2026
+              </p>
             </div>
 
-            <div className="md:pb-2">
-              <p className="body-copy">
-                Elsewhere is building original fantasy worlds for your phone.
-                Free wallpapers, live wallpapers, premium collections, and
-                custom worlds are on the way.
-              </p>
+            <h1
+              className="whitespace-nowrap text-[clamp(3.45rem,16.5vw,10.6rem)] font-normal leading-[0.8] tracking-[-0.07em]"
+              style={{
+                fontFamily:
+                  'Georgia, "Times New Roman", Times, serif',
+              }}
+            >
+              Elsewhere
+            </h1>
 
-              <div className="mt-8 flex flex-col gap-3 sm:flex-row md:flex-col">
-                <a href="#support" className="primary-link">
-                  Support Elsewhere
-                </a>
+            <div className="mt-[clamp(1rem,2.2vh,1.8rem)] grid gap-4 md:grid-cols-[1.2fr_0.8fr] md:items-start">
+              <div />
 
-                <a href="#updates" className="secondary-link">
-                  Get new world drops
-                </a>
+              <div className="border-l border-border pl-4 md:pl-6">
+                <p className="max-w-[300px] text-[13px] leading-[1.58] text-muted md:text-sm">
+                  The first Elsewhere wallpapers and live wallpapers are being
+                  finished now.
+                </p>
+
+                <div className="mt-3 flex items-center gap-2">
+                  <span className="h-[5px] w-[5px] bg-accent" />
+
+                  <span className="text-[9px] uppercase tracking-[0.22em] text-subtle">
+                    First releases soon
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* ACTION AREA */}
+          <div className="border-t border-border py-[clamp(0.8rem,2vh,1.35rem)]">
+            <div className="grid gap-[clamp(0.75rem,1.8vh,1.25rem)] md:grid-cols-[0.9fr_1.1fr] md:items-end">
+              {/* COMING SOON */}
+              <div>
+                <p className="mb-2 text-[8px] uppercase tracking-[0.26em] text-subtle md:text-[9px]">
+                  Coming soon
+                </p>
+
+                <p className="text-[11px] leading-5 text-muted md:text-xs">
+                  Free wallpapers
+                  <span className="mx-2 text-border-strong">/</span>
+                  Live wallpapers
+                  <span className="mx-2 text-border-strong">/</span>
+                  Original collections
+                </p>
               </div>
 
-              <p className="mt-6 text-xs uppercase tracking-[0.16em] text-subtle">
-                New worlds released regularly
-              </p>
+              {/* AVAILABLE NOW */}
+              <div>
+                <div className="mb-2 flex items-center justify-between">
+                  <p className="text-[8px] uppercase tracking-[0.26em] text-subtle md:text-[9px]">
+                    Available now
+                  </p>
+
+                  <p className="text-[8px] text-subtle md:text-[9px]">
+                    Get the first drop
+                  </p>
+                </div>
+
+                <div className="flex gap-2">
+                  <form
+                    action="https://app.kit.com/forms/9990458/subscriptions"
+                    method="post"
+                    className="flex min-w-0 flex-1 gap-2 md:max-w-[620px]"
+                  >
+                    <input
+                      type="email"
+                      name="email_address"
+                      required
+                      placeholder="Email address"
+                      aria-label="Email address"
+                      className="h-11 min-w-0 flex-1 rounded-none border border-border-strong bg-transparent px-3 text-[12px] text-foreground outline-none transition-colors placeholder:text-subtle focus:border-muted md:h-12 md:px-4 md:text-sm"
+                    />
+
+                    <button
+                      type="submit"
+                      className="h-11 shrink-0 border border-accent bg-accent px-4 text-[11px] font-semibold text-[#0b0d10] transition-colors hover:bg-[var(--accent-hover)] md:h-12 md:px-6 md:text-sm"
+                    >
+                      Join
+                    </button>
+                  </form>
+
+                  <a
+                    href="https://ko-fi.com/elsewherewalls"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex h-11 shrink-0 items-center justify-center border border-border-strong px-3 text-[11px] text-muted transition-colors hover:border-muted hover:text-foreground md:h-12 md:px-5 md:text-sm"
+                  >
+                    Support
+                  </a>
+                </div>
+              </div>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      <section className="site-shell border-t border-border py-16 md:py-24">
-        <div className="grid gap-10 md:grid-cols-2">
-          <div>
-            <p className="eyebrow mb-4">Coming soon</p>
-
-            <h2 className="max-w-lg text-3xl font-medium tracking-tight md:text-4xl">
-              Free live wallpapers and original collections.
-            </h2>
-          </div>
-
-          <div className="space-y-6 text-muted">
-            <p className="body-copy">
-              Elsewhere is currently building its first original wallpaper
-              worlds. Free downloads will be available first, followed by
-              premium collections and custom releases.
-            </p>
-
-            <p className="body-copy">
-              No subscriptions yet. No clutter. Just new worlds as they are
-              finished.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      <section
-        id="support"
-        className="site-shell border-t border-border py-16 md:py-24"
-      >
-        <div className="grid gap-10 md:grid-cols-[1fr_0.75fr] md:items-end">
-          <div>
-            <p className="eyebrow mb-4">Support the project</p>
-
-            <h2 className="max-w-2xl text-3xl font-medium tracking-tight md:text-5xl">
-              Help fund the next world.
-            </h2>
-
-            <p className="body-copy mt-5">
-              Most Elsewhere wallpapers will remain free. If you enjoy the
-              project, you can help support new releases and future live
-              wallpapers.
-            </p>
-          </div>
-
-          <div>
-<a
-  href="https://ko-fi.com/elsewherewalls"
-  target="_blank"
-  rel="noopener noreferrer"
-  className="primary-link w-full"
-  aria-label="Support Elsewhere on Ko-fi"
->
-  Support Elsewhere
-</a>
-
-<p className="mt-4 text-sm leading-6 text-subtle">
-  One-time support through Ko-fi. No subscription required.
-</p>
-          </div>
-        </div>
-      </section>
-
-      <section className="site-shell border-t border-border py-16 md:py-24">
-        <div className="grid gap-8 md:grid-cols-2">
-          <div>
-            <p className="eyebrow mb-4">Request a world</p>
-
-            <h3 className="text-2xl font-medium tracking-tight">
-              Have an idea you want to see?
-            </h3>
-
-            <p className="body-copy mt-4">
-              Free suggestions and paid priority requests will be available
-              soon.
-            </p>
-          </div>
-
-          <div>
-            <p className="eyebrow mb-4">Custom worlds</p>
-
-            <h3 className="text-2xl font-medium tracking-tight">
-              Something made just for you.
-            </h3>
-
-            <p className="body-copy mt-4">
-              Private custom wallpaper collections are planned for a future
-              release.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      <section
-        id="updates"
-        className="site-shell border-t border-border py-16 md:py-24"
-      >
-        <div className="max-w-2xl">
-          <p className="eyebrow mb-4">Elsewhere updates</p>
-
-          <h2 className="text-3xl font-medium tracking-tight md:text-4xl">
-            New worlds, before they hit TikTok.
-          </h2>
-
-          <p className="body-copy mt-4">
-            Occasional wallpaper drops, new collections, and project updates.
-            No daily spam.
-          </p>
-
-<form
-  action="https://app.kit.com/forms/9990458/subscriptions"
-  method="post"
-  className="mt-8 flex w-full max-w-xl flex-col gap-3 sm:flex-row"
->
-  <input
-    type="email"
-    name="email_address"
-    required
-    placeholder="Email address"
-    aria-label="Email address"
-    className="min-h-[52px] flex-1 rounded-[4px] border border-border-strong bg-surface px-4 text-foreground outline-none transition placeholder:text-subtle focus:border-accent"
-  />
-
-  <button
-    type="submit"
-    className="primary-link shrink-0 sm:min-w-[150px]"
-  >
-    Join Elsewhere
-  </button>
-</form>
-
-<p className="mt-3 text-xs leading-5 text-subtle">
-  Wallpaper drops and new worlds. No daily spam.
-</p>
-        </div>
-      </section>
-
-      <footer className="site-shell border-t border-border py-8">
-        <div className="flex flex-col gap-4 text-sm text-subtle sm:flex-row sm:items-center sm:justify-between">
+        {/* FOOTER */}
+        <footer className="flex items-center justify-between border-t border-border py-3 text-[8px] uppercase tracking-[0.12em] text-subtle md:py-4 md:text-[9px]">
           <p>© 2026 Elsewhere Walls</p>
-
-          <p>Wallpapers from worlds that don&apos;t exist.</p>
-        </div>
-      </footer>
+          <p>elsewherewalls.com</p>
+        </footer>
+      </div>
     </main>
   );
 }
